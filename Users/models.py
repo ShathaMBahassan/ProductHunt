@@ -7,4 +7,4 @@ class Create_User(models.Model):
     Password = models.CharField(max_length=200)
 
     def __str__(self):
-        return f"the user is {self.full_name}"
+        return f"the user  is {self.full_name}"
