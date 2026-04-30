@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if error_user %}
+<p style="color: red ; font-weight: bold;">
+{{error_user}}
+</p>
+<br />
+{% endif %}
+{% if error_password %}
+<p style="color: red ; font-weight: bold;">
+{{error_password}}
+</p>
+<br />
+{% endif %}
+<h1>Sign Up</h1>
+<form method="POST" action="{% url 'singUp_page' %}">
+    {% csrf_token %}
+    <div class="container">
+        <br />
+        Username:
+        <br />
+        <input type="username" name="username" />
+        <br />
+        Password:
+        <br />
+        <input type="password" name="password1" />
+        <br />
+        Confirm Password:
+        <br />
+        <input type="password" name="password2" />
+        <br />
+        <br />
+        <div class="container">
+            <input class="btn btn-primary" type="submit" Value="Sign Up">
+        </div>
+    </div>
+</form>
+{% endblock %}
