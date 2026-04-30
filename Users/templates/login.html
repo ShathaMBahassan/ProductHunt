@@ -1,5 +1,27 @@
-
 {% extends 'base.html' %}
 {% block content %}
-<h1>Hello World 2</h1>
+{% if error_login %}
+<p style="color: red; font-weight: bold;">
+{{error_login}}
+</p>
+{%endif%}
+<h2>LogIn</h2>
+<br />
+<form method="POST" action="{% url 'login_page' %}">
+    {% csrf_token %}
+    <div class="container">
+        Username :
+        <br />
+        <input type="usename" name="username">
+        <br />
+        Password :
+        <br />
+        <input type="password" name="password">
+        <br/>
+        <br/>
+        <div class="container">
+            <input class="btn btn-primary" type="submit" value="LogIn">
+        </div>
+    </div>
+</form>
 {% endblock %}

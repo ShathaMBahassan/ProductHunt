@@ -1,10 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from .models import Create_User
 
 
 def login(request):
+    if request.method == 'POST':
+        username_inp = request.POST['username']
+        password_inp = request.POST['password'] 
+        try:
+            user = Create_User.objects.get(
+                username=username_inp,
+                Password=password_inp)
+            return redirect('product_views')
+        except Create_User.DoesNotExist:
+            message = 'Invalid username or password'
+            return render(request,'login.html',{'error_login':message})
+    else:
+        return render(request,'login.html')
 
-    return render(request,'login.html')
+    
 
 
 def signUp(request):
