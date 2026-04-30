@@ -1,5 +1,7 @@
 from django.shortcuts import render , redirect
 from .models import Create_User
+from django.contrib.auth import logout
+
 
 
 def login(request):
@@ -10,15 +12,15 @@ def login(request):
             user = Create_User.objects.get(
                 username=username_inp,
                 Password=password_inp)
+            
+            request.session['username'] = username_inp
+
             return redirect('product_views')
         except Create_User.DoesNotExist:
             message = 'Invalid username or password'
             return render(request,'login.html',{'error_login':message})
     else:
         return render(request,'login.html')
-
-    
-
 
 def signUp(request):
     if request.method =='POST':
@@ -45,7 +47,11 @@ def signUp(request):
 
 
 def logOut(request):
+    if request.method == 'POST':
+        logout(request)
+        return render(request,'login.html') 
+        
 
-    return render(request,'logOut.html')
+    return redirect('product_views')
 
 
