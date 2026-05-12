@@ -6,9 +6,8 @@ from django.contrib import messages
 # Create your views here.
 
 def product_views(request,user_id):
-    user_id = user_id
-    
-    return render(request, 'product_views.html',{'user_id':user_id})
+    products = Product.objects.filter(hunter_id=user_id)
+    return render(request, 'product_views.html',{'user_id':user_id,'products':products})
 
 def product_details(request):
 
