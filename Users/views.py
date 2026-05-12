@@ -15,7 +15,10 @@ def login(request):
             
             request.session['username'] = username_inp
 
-            return redirect('product_views')
+            # Save inside the seesion so we can call the id id any time 
+            request.session['id'] = user.id 
+            
+            return redirect('product_view',user_id=user.id)
         except Create_User.DoesNotExist:
             message = 'Invalid username or password'
             return render(request,'login.html',{'error_login':message})

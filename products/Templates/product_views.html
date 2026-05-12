@@ -1,4 +1,23 @@
 {% extends 'main/base.html' %}
+{% load static %}
 {% block content %}
-<h1>Product</h1>
+<br />
+<br />
+
+<div id="msg-alert">
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+</div>
+
+<a href = "{% url 'create_product' user_id %}" class="btn btn-primary" style="position: absolute; right: 100px;">
+    Create Product
+</a>
+
+
 {% endblock %}
+
