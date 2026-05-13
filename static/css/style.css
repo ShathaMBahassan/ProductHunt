@@ -1,4 +1,8 @@
- .bd-placeholder-img {
+.body {
+  background-color:  lightblue;
+}
+
+.bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
       -webkit-user-select: none;
@@ -96,6 +100,16 @@
     font-weight: bold;
 }
 
+.font-tille {
+    font-family: "Noto Sans Arabic";
+    color:#F08D39;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+}
+
 .product-button {
   margin-top: auto;
 }
@@ -130,7 +144,7 @@
   vertical-align: middle;
 
   position: absolute; 
-  right: 100px;
+  left: 100px;
 }
 
 .button-24:hover,
@@ -143,4 +157,115 @@
 
 .button-24:active {
   opacity: .5;
+}
+
+.custom-card{
+ height: 380px;
+}
+
+.login-card {
+    background-color: #212529;
+    color: white;
+
+    max-width: 340px;
+    width: 100%;
+    height: 100%;
+
+
+    margin: auto;
+
+    padding: 2rem 1rem;
+    text-align: left;
+
+    font-size: 0.875rem;
+
+    border-radius: 0.75rem;
+
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+   margin-top: 70px;
+}
+
+.button-25 {
+  background: #F08D39;
+  border: 1px solid #F08D39;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #212529;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Noto Sans Arabic";
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+
+  position: absolute; 
+  margin-bottom: 1rem; 
+}
+
+.button-25:hover,
+.button-25:active {
+  background-color: whitesmoke;
+  border: 1px solid #212529;
+  background-position: 0 0;
+  color: #F08D39;
+}
+
+.button-25:active {
+  opacity: .5;
+}
+
+.custom-input {
+    width: 100%;
+    outline: none;
+    background-color: whitesmoke;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.font-sub-title {
+
+    text-align: right;
+    font-size: medium;
+}
+
+.arabic-font {
+
+   font-family: "Noto Sans Arabic";
+}
+
+.navbar-items {
+    display: flex;
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+.parent {
+    height: 500px;   
+}
+
+.button-center {
+    margin: 0 auto;
+    display: block;
+}
+
+.alert-danger-01 {
+  color: #212529;
+  background-color: #F08D39;
+  border: 1px solid #f5c2c7;
+  padding: 1rem;
+  border-radius: 0.25rem;
 }

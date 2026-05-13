@@ -20,7 +20,7 @@ def login(request):
             
             return redirect('product_view',user_id=user.id)
         except Create_User.DoesNotExist:
-            message = 'Invalid username or password'
+            message = 'كلمة المرور أو اسم المستخدم غير صحيح'
             return render(request,'login.html',{'error_login':message})
     else:
         return render(request,'login.html')
@@ -31,7 +31,7 @@ def signUp(request):
         if request.POST['password1'] == request.POST['password2']:
             try:
                 user = Create_User.objects.get(username=request.POST['username'])
-                user_message = "the user has been already exist"
+                user_message = "المستخدم موجود بالفعل"
                 return render(request,'signUp.html',{'error_user':user_message})
             except Create_User.DoesNotExist:
                 user = Create_User.objects.create(
@@ -40,7 +40,7 @@ def signUp(request):
                 )
                 return render(request,'message.html')
         else:
-            message = "Password and confirmation do not match."
+            message = "كلمة المرور وتأكيد كلمة المرور غير متطابقين"
             return render(request,'signUp.html', {'error_password': message})
 
     else:
