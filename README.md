@@ -33,3 +33,5 @@ The project allows users to:
 ## Project Purpose
 
 This project was built from scratch as a personal learning project to improve my Django web development skills and practice building a full-stack web application.
+
+![Home Page](productHunt-01.png)
