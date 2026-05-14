@@ -25,19 +25,19 @@
   <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB">
   <meta name="theme-color" content="#712cf9">
-  <!-- ------------------------------- Create Product ----------------------------------------->
-  <a href="{% url 'create_product' user_id %}" class="button-24">
-    منتج جديد
-  </a>
-  <br/>
-  <!-- -------------------------------End Create Product ----------------------------------->
-  <style>
-
-  </style>
 </head>
 
 <body>
   <main>
+    <div class="container">
+      <div class="mb-4">
+        <!-- ------------------------------- Create Product ----------------------------------------->
+        <a href="{% url 'create_product' user_id %}" class="button-24">
+          منتج جديد
+        </a>
+        
+        <!-- -------------------------------End Create Product ----------------------------------->
+      </div>
     <div class="album py-5">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -57,7 +57,7 @@
                 </p>
                 <div class="mt-auto pt-3">
                   <div class="btn-group product-button">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="button-26">عرض</button>
                   </div>
                 </div>
               </div>
@@ -67,10 +67,11 @@
         </div>
       </div>
     </div>
+    </div>
   </main>
   <footer class="text-body-secondary py-5">
     <div class="container">
-      <p class="float-end mb-1"> <a href="#">Back to top</a> </p>
+      <p class="float-end" style="color: black;"> <a href="#">Back to top</a> </p>
     </div>
   </footer>
   <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"

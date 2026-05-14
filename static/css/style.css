@@ -143,8 +143,7 @@
   touch-action: manipulation;
   vertical-align: middle;
 
-  position: absolute; 
-  left: 100px;
+  
 }
 
 .button-24:hover,
@@ -169,7 +168,7 @@
 
     max-width: 340px;
     width: 100%;
-    height: 100%;
+    height: 110%;
 
 
     margin: auto;
@@ -183,7 +182,7 @@
 
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 
-   margin-top: 70px;
+   margin-top: 30px;
 }
 
 .button-25 {
@@ -268,4 +267,72 @@
   border: 1px solid #f5c2c7;
   padding: 1rem;
   border-radius: 0.25rem;
+}
+
+
+.button-26 {
+  background: #F08D39;
+  border: 1px solid #F08D39;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #212529;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Noto Sans Arabic";
+  font-size: 16px;
+  font-weight: 800;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.button-26:hover,
+.button-26:active {
+  background-color: whitesmoke;
+  border: 1px solid #212529;
+  background-position: 0 0;
+  color: #F08D39;
+}
+
+.button-26:active {
+  opacity: .5;
+}
+
+.items-pro {
+  margin-left: 180 px;
+}
+
+.date-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.custom-upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #f4f4f4;
+  color: #212529;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: background 0.3s ease;
+}
+
+.custom-upload-btn:hover {
+  background-color: #F08D39;
 }
